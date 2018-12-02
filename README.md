@@ -1,2 +1,4 @@
-# node-mentoring
-NodeJS mentoring homework application
+# NodeJS mentoring. Homework application
+
+Run solution:
+npm start
