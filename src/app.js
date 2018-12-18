@@ -1,7 +1,8 @@
 import config from '../config/json.json'
-import { Product, User } from './models'
+import {DirWatcher, Importer} from './utils'
 
-const user = new User()
-const product = new Product()
+const {dataFolder, readDelay, type} = config
+const dirWatcher = new DirWatcher(dataFolder, readDelay)
+const importer = new Importer(dirWatcher.emitter, type)
 
-console.log(config.name)
+dirWatcher.watch()
