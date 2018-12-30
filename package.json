@@ -5,9 +5,11 @@
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon --exec babel-node src/app.js",
+    "start:sync": "IMPORT_MODE=sync nodemon --exec babel-node src/app.js",
     "build": "babel src --out-dir dist",
     "serve": "node dist/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node csv-generator.js > data/new-test-file.csv"
   },
   "author": "Nick Osiunin <one.design@gmail.com>",
   "license": "ISC",
@@ -19,6 +21,7 @@
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/register": "^7.0.0",
     "csv": "^5.0.1",
+    "md5": "^2.2.1",
     "nodemon": "^1.18.7"
   }
 }

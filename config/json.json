@@ -1,6 +1,5 @@
 {
   "name": "Node.js Homework 2",
   "dataFolder": "data",
-  "readDelay": 5000,
-  "type": "sync"
+  "readDelay": 5000
 }

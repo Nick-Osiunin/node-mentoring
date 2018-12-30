@@ -1,47 +1,35 @@
 import fs from 'fs'
 import util from 'util'
+import * as path from 'path'
 import parse from 'csv-parse/lib/sync'
 
 const readFileAsync = util.promisify(fs.readFile);
 
 export default class Importer {
-  constructor(emitter, type) {
-    emitter.on('dirwatcher:changed', this.onChange.bind(this))
-    this.type = type
-  }
-
-  onChange(files) {
-    files.forEach(file => {
-
-      switch (this.type) {
-        case 'sync':
-          console.log(this.importSync(file))
-          break
-        case 'async':
-          const asyncRes = this.import(file)
-          console.log(asyncRes)
-          asyncRes.then(item => console.log(item))
-      }
-    })
-  }
-
-  importSync(path) {
-    const input = fs.readFileSync(path).toString()
-    const data = parse(input, {
-      columns: true,
-      skip_empty_lines: true
-    })
-    return data
-  }
-
-  async import(path) {
+  static importSync(fileName) {
     try {
-      const input = await readFileAsync(path)
+      fileName = path.resolve(fileName)
+      const input = fs.readFileSync(fileName).toString()
+      return parse(input, {
+        columns: true,
+        skip_empty_lines: true
+      })
+    } catch (err) {
+      console.log('\nImport error!\n')
+      throw err
+    }
+  }
+
+  static async import(fileName) {
+    try {
+      fileName = path.resolve(fileName)
+      const input = await readFileAsync(fileName)
       return parse(input.toString(), {
         columns: true,
         skip_empty_lines: true
       })
     } catch (err) {
+      console.log('\nImport error!\n')
       throw err
     }
   }
