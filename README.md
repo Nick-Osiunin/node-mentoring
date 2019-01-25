@@ -1,6 +1,9 @@
 # NodeJS mentoring. Homework application
 
 Run solution:
-npm i && npm start
-
-run "npm run start:sync" for Synchronous Import
+pm run streams -- --help  
+pm run streams -- --action transform  
+pm run streams -- --action reverse  
+pm run streams -- -a outputFile -f ./package.json  
+pm run streams -- -a convertFromFile -f ./data/new-test-file.csv  
+pm run streams -- -a convertToFile -f ./data/new-test-file.csv  
