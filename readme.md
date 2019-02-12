@@ -1,9 +1,9 @@
 # NodeJS mentoring. Homework application
 
+#Task 4
+
 Run solution:
-npm run streams -- --help  
-npm run streams -- --action transform  
-npm run streams -- --action reverse  
-npm run streams -- -a outputFile -f ./package.json  
-npm run streams -- -a convertFromFile -f ./data/new-test-file.csv  
-npm run streams -- -a convertToFile -f ./data/new-test-file.csv  
+npm run build && node dist/http-servers/app/index.js
+npm run build && node dist/http-servers/json-server.js  
+npm run build && node dist/http-servers/plain-text-server.js  
+npm run build && node dist/http-servers/html-server.js  
