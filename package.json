@@ -22,6 +22,7 @@
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/register": "^7.0.0",
     "csv": "^5.0.1",
+    "express": "^4.16.4",
     "md5": "^2.2.1",
     "nodemon": "^1.18.7"
   },
