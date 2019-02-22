@@ -135,7 +135,7 @@ function getStreamOrDie(filename) {
 
 function fileAccessError() {
   console.log(NOFILE_MSG)
-  process.exit(0);
+  process.exit(1);
 }
 
 function jsonFromCsv(stream) {

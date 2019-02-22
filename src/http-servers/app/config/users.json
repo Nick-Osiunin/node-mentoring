@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Petr Vodkin",
+    "login": "user1",
+    "email": "user1@gmail.com",
+    "pass": "E00CF25AD42683B3DF678C61F42C6BDA"
+  },
+  {
+    "id": 2,
+    "name": "Vasiliy Pupkin",
+    "login": "admin",
+    "email": "admin@gmail.com",
+    "pass": "21232F297A57A5A743894A0E4A801FC3"
+  }
+]
