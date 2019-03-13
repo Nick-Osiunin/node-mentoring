@@ -4,6 +4,7 @@ import md5 from 'md5'
 import config from './config/config.json'
 import products from './config/products.json'
 import users from './config/users.json'
+import Sequelize from 'sequelize'
 
 const app = express()
 
@@ -12,6 +13,25 @@ const authErrorResponse = {
   message: 'Authorization failed',
 }
 const JWT_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IlZhc2lsaXkgUHVwa2luIiwibG9naW4iOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwicGFzcyI6IjIxMjMyRjI5N0E1N0E1QTc0Mzg5NEEwRTRBODAxRkMzIiwiaWF0IjoxNTUwNzk3ODkyLCJleHAiOjE1NTA4MDc4OTJ9.Si0hx74ugulr_xHgYTXKN1_qGFXN_zfDGggxL2OQvmc'
+
+const sequelize = new Sequelize('task6', 'admin', 'admin', {
+  host: '127.0.0.1',
+  dialect: 'postgres',
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  },
+})
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 
 app.use(express.json())
 
@@ -27,7 +47,7 @@ app.use(['/products', '/users'], (req, res, next) => {
 })
 
 app.get('/', function (req, res) {
-  res.send('Hello world')
+  res.send('Task6: SQL')
 })
 
 // Test with body {"login": "admin", "password": "admin"}
