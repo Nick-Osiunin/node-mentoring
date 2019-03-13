@@ -13,7 +13,8 @@
     "streams": "babel src/utils/streams.js --out-dir dist/utils && node dist/utils/streams.js",
     "task6:serve": "nodemon --exec babel-node src/http-servers/app/index.js",
     "task6:docker": "docker container run -d -p 5432:5432 --name task6postgress --rm -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=task6 postgres:11.2-alpine",
-    "task6:migrate": "cd src/http-servers/app/db && npx sequelize db:migrate"
+    "task6:migrate": "cd src/http-servers/app/db && npx sequelize db:migrate",
+    "task6:init": "cd src/http-servers/app/db && npx sequelize model:generate --name Product --attributes title:string,description:string,price:float && npx sequelize model:generate --name User --attributes firstName:string,lastName:string,email:string"
   },
   "author": "Nick Osiunin <one.design@gmail.com>",
   "license": "ISC",
