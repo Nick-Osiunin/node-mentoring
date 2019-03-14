@@ -1,11 +1,9 @@
 # NodeJS mentoring. Homework application
 
-#Task 5
+#Task 6
 
 Run solution:
-npm run task6:docker
-npm run task6:migrate
-npm run task6:serve
+npm run task6
 
 ### Get JWT token
 POST http://localhost:8080/auth
@@ -18,4 +16,3 @@ GET http://localhost:8080/products
 GET http://localhost:8080/users
 
 ### Decoded info from JWT token should be displayed in console
-
