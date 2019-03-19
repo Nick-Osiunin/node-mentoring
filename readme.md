@@ -1,9 +1,9 @@
 # NodeJS mentoring. Homework application
 
-#Task 6
+#Task 7
 
 Run solution:
-npm run task6
+npm run task7
 
 ### Get JWT token
 POST http://localhost:8080/auth

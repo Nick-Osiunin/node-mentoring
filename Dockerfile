@@ -1,7 +1,0 @@
-FROM postgres:11.2-alpine
-
-ENV POSTGRES_USER="admin"
-ENV POSTGRES_PASSWORD="admin"
-ENV POSTGRES_DB="task6"
-
-EXPOSE 5432

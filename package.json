@@ -4,18 +4,11 @@
   "description": "node mentoring test app",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/app.js",
-    "start:sync": "IMPORT_MODE=sync nodemon --exec babel-node src/app.js",
-    "build": "babel src --out-dir dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node csv-generator.js > data/new-test-file.csv",
-    "streams": "babel src/utils/streams.js --out-dir dist/utils && node dist/utils/streams.js",
     "serve": "nodemon --exec babel-node src/http-servers/app/index.js",
-    "dbdocker": "docker container run -d -p 5432:5432 --name task6postgress --rm -e POSTGRES_PASSWORD=admin -e POSTGRES_USER=admin -e POSTGRES_DB=task6 postgres:11.2-alpine && sleep 5",
-    "db:migrate": "cd src/http-servers/app/db && npx sequelize db:migrate",
-    "db:seed": "cd src/http-servers/app/db && npx sequelize db:seed:all",
+    "db:docker": "docker container run -d --mount type=bind,source=\"$(pwd)\"/data,target=/home,readonly -p 27017:27017 --name task7mongo --rm -e MONGO_INITDB_ROOT_PASSWORD=admin -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_DATABASE=task7 mongo:3.4.20-jessie && sleep 5",
+    "db:import": "docker exec task7mongo mongoimport --authenticationDatabase admin --db task7 -u admin -p admin  --file /home/cities.json --mode=merge --drop --jsonArray",
     "dbprepare": "run-s db:*",
-    "task6": "run-s dbdocker dbprepare serve"
+    "task7": "run-s dbprepare serve"
   },
   "author": "Nick Osiunin <one.design@gmail.com>",
   "license": "ISC",
@@ -26,7 +19,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "csv": "^5.0.1",
+    "csdbv": "^5.0.1",
     "express": "^4.16.4",
     "md5": "^2.2.1",
     "nodemon": "^1.18.7",
@@ -36,10 +29,7 @@
     "csvtojson": "^2.0.8",
     "jsonwebtoken": "^8.4.0",
     "minimist": "^1.2.0",
-    "pg": "^7.8.2",
-    "pg-hstore": "^2.3.2",
-    "sequelize": "^4.43.0",
-    "sequelize-cli": "^5.4.0",
+    "mongodb": "^3.1.13",
     "through2": "^3.0.0"
   }
 }

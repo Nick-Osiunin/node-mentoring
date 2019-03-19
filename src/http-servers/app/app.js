@@ -1,9 +1,9 @@
 import express from 'express'
 import jwt from 'jsonwebtoken'
 import md5 from 'md5'
+import mongo from 'mongodb'
 import config from './config/config.json'
 import users from './config/users.json'
-import db from './db/models'
 
 const app = express()
 
@@ -27,20 +27,28 @@ app.use(['/products', '/users'], (req, res, next) => {
   }
 })
 
-app.get('/', function (req, res) {
-  db.sequelize
-    .authenticate()
-    .then(() => {
-      res.send('Sequelize: Connection has been established successfully.')
-    })
-    .catch(err => {
-      console.error('Unable to connect to the database:', err);
-      res.send('Sequelize: Unable to connect to the database.')
+app.get('/', (req, response) => {
+  const MongoClient = mongo.MongoClient;
+  MongoClient.connect('mongodb://admin:admin@127.0.0.1:27017/',
+    (err, dbConn) => {
+      if (err) throw err;
+      dbConn
+        .db("task7")
+        .collection("cities")
+        .aggregate([{$sample: {size: 1}}], {}, (err, result) => {
+          if (err) throw err;
+          result
+            .toArray()
+            .then(data => {
+              response.status(200).send(data)
+              dbConn.close()
+            })
+        });
     });
 })
 
 // Test with body {"login": "admin", "password": "admin"}
-app.post('/auth', function (req, res) {
+app.post('/auth', (req, res) => {
   const resObj = authErrorResponse
   const credentialsProvided =
     req.body &&
@@ -65,24 +73,12 @@ app.post('/auth', function (req, res) {
     .send(resObj)
 })
 
-app.get('/products', function (req, res) {
-  db.Product
-    .findAll({})
-    .then(products => {
-      res
-        .status(200)
-        .json(products)
-    })
+app.get('/products', (req, res) => {
+
 })
 
-app.get('/users', function (req, res) {
-  db.User
-    .findAll({})
-    .then(users => {
-      res
-        .status(200)
-        .json(users)
-    })
+app.get('/users', (req, res) => {
+
 })
 
 export default app
