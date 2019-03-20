@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-stage-2": "^7.0.0",
     "@babel/register": "^7.0.0",
-    "csdbv": "^5.0.1",
+    "csv": "^5.0.1",
     "express": "^4.16.4",
     "md5": "^2.2.1",
     "nodemon": "^1.18.7",
@@ -30,6 +30,7 @@
     "jsonwebtoken": "^8.4.0",
     "minimist": "^1.2.0",
     "mongodb": "^3.1.13",
+    "mongoose": "^5.4.19",
     "through2": "^3.0.0"
   }
 }
