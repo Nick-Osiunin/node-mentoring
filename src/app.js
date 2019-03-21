@@ -2,9 +2,7 @@ import express from 'express'
 import jwt from 'jsonwebtoken'
 import md5 from 'md5'
 import config from './config/config.json'
-import City from './models/City'
-import User from './models/User'
-import Product from './models/Product'
+require('./models/all-models').toContext(global);
 
 const app = express()
 
