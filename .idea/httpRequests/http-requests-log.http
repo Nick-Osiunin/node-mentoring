@@ -1,0 +1,509 @@
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-21T043926.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "adminw"
+}
+
+<> 2019-03-21T043919.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "adminw"
+}
+
+<> 2019-03-21T043913.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-21T043907.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+<> 2019-03-21T043902.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+<> 2019-03-21T043857.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+<> 2019-03-21T043758.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+<> 2019-03-21T043741.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-21T043730.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043653.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+<> 2019-03-21T043643.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043630.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043618.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043609.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043509.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2a"
+}
+
+<> 2019-03-21T043305.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2"
+}
+
+<> 2019-03-21T043254.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-21T043244.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": ""
+}
+
+<> 2019-03-21T043236.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": ""
+}
+
+<> 2019-03-21T043232.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": ""
+}
+
+<> 2019-03-21T043221.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": ""
+}
+
+<> 2019-03-21T043100.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "adm"
+}
+
+<> 2019-03-21T043054.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2"
+}
+
+<> 2019-03-21T043047.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin2"
+}
+
+<> 2019-03-21T043043.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "admin"
+}
+
+<> 2019-03-21T043038.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T043018.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T042426.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T042420.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T042335.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T042328.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{
+  "login": "admin",
+  "password": "ccc"
+}
+
+<> 2019-03-21T042226.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ }
+
+<> 2019-03-21T042125.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T042115.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041526.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041235.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041224.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041110.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041051.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T041000.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T040915.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T040821.403.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-21T033200.200.json
+
+###
+
+POST http://localhost:8080/auth
+Content-Type: application/json
+
+{ "login" : "admin", "password": "admin" }
+
+<> 2019-03-14T124736.200.json
+
+###
+

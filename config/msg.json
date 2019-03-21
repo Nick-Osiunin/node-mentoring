@@ -1,9 +1,0 @@
-{
-  "HELP_MSG": "\nPlease, provide supported arguments. Usage example: \nnode streams.js -a ActionName [-f FileName] \n\n -a / --action  Mandatory. Action name: reverse|transform|outputFile|convertFromFile|convertToFile \n -f / --file    File name \n -h / --help    Print help message \n\n",
-  "REVERSE_MSG": "\nEnter text to reverse:\n",
-  "OUTPUTFILE_MSG": "\nHere is the content of file",
-  "NOFILE_MSG": "\nExisting file needed for this action.\nPlease provide filename after -f | --file key.\nUse -h | --help key to see usage example.\n",
-  "TRANSFORM_MSG": "\nEnter text to uppercase:\n",
-  "CONVERTFILE_INTRO_MSG": "\nSelected file would be converted to JSON:",
-  "CONVERTFILE_MSG": "\nConverted CSV ready for using by path ./"
-}

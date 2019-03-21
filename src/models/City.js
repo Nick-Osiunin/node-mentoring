@@ -1,12 +1,10 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 if (mongoose.connection.readyState === 0) {
-  mongoose.connect(require('./connection-string'));
+  mongoose.connect(require('./connection-string'), {dbName: 'task7'});
 }
 
-
-var newSchema = new Schema({
-  
+const newSchema = new Schema({
   'city': { type: String },
   'll': { type: String },
   'createdAt': { type: Date, default: Date.now },
@@ -25,7 +23,5 @@ newSchema.pre('update', function() {
 newSchema.pre('findOneAndUpdate', function() {
   this.update({}, { $set: { updatedAt: Date.now() } });
 });
-
-
 
 module.exports = mongoose.model('City', newSchema);
