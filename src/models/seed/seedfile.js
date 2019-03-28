@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
-const citiesJson = require('../../config/cities');
-const usersJson = require('../../config/users');
-const productsJson = require('../../config/products');
-require('../all-models').toContext(global);
+const mongoose = require('mongoose')
+const citiesJson = require('../../config/cities')
+const usersJson = require('../../config/users')
+const productsJson = require('../../config/products')
+require('../all-models').toContext(global)
 
 Promise
   .all([
@@ -12,5 +12,5 @@ Promise
   ])
   .then(() => {
     console.log("Seed complete!")
-    mongoose.connection.close();
-  });
+    mongoose.connection.close()
+  })

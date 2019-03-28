@@ -6,13 +6,13 @@ Run solution:
 npm run task7
 
 ### Get JWT token
-POST http://localhost:8080/auth
+POST http://localhost:8080/api/auth
 Content-Type: application/json
 { "login" : "admin", "password": "admin" }
 
 
-### Then save it to constant variable JWT_TOKEN, and run
-GET http://localhost:8080/products
-GET http://localhost:8080/users
+### Then save it to config.json property JWT_TOKEN, and run
+GET http://localhost:8080/api/products
+GET http://localhost:8080/api/users
 
 ### Decoded info from JWT token should be displayed in console

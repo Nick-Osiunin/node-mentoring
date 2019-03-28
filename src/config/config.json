@@ -1,9 +1,14 @@
 {
   "expressPort": 8080,
+  "urlPrefix": "api",
   "credentials": {
     "login": "admin",
     "password": "21232F297A57A5A743894A0E4A801FC3",
-    "secret": "ouhHYG#I$$&^(#&HG",
-    "urlPrefix":"api"
-  }
+    "secret": "ouhHYG#I$$&^(#&HG"
+  },
+  "authErrorResponse": {
+    "code": 403,
+    "message": "Authorization failed"
+  },
+  "JWT_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiVmFzaWxpeSBQdXBraW4iLCJsb2dpbiI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE1NTM4MTUxNDEsImV4cCI6MTU2MzgxNTE0MX0.BdZ9iiBrC8K2OFIp_-J1rMqY4csffTe6uiJbEbHinX4"
 }
