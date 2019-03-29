@@ -23,4 +23,4 @@ Object.defineProperty(models.__proto__, 'toContext', {
   }
 })
 
-module.exports = models
+export default models

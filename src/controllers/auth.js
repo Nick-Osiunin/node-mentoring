@@ -4,13 +4,10 @@ import config from "../config/config"
 import jwt from 'jsonwebtoken'
 
 const router = express.Router()
-const {
-  authErrorResponse,
-} = config
 
 // Test with body {"login": "admin", "password": "admin"}
 router.post('/auth', (req, res) => {
-  const resObj = {...authErrorResponse}
+  const resObj = {...config.authErrorResponse}
   const credentialsProvided =
     req.body &&
     req.body.login &&
