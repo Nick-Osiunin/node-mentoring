@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+const fs = require('fs')
+const path = require('path')
 
 //require all the models 
 const models = {}
@@ -15,7 +15,7 @@ names.forEach(name => {
 // define non-enumerable method to place each model onto an object. primarily for making them global
 Object.defineProperty(models.__proto__, 'toContext', {
   enumerable: false,
-  value: function(context) {
+  value: function (context) {
     for (const name in this) {
       context[name] = this[name]
     }
@@ -23,4 +23,4 @@ Object.defineProperty(models.__proto__, 'toContext', {
   }
 })
 
-export default models
+module.exports = models
