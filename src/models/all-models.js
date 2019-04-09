@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-//require all the models 
+//require all the models
 const models = {}
 const names = fs.readdirSync(path.resolve(__dirname))
 
